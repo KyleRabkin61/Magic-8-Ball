@@ -1,12 +1,65 @@
-function shakeMagic8Ball(){
+function shakeMagic8Ball() {
     const question = prompt('Ask the Magic 8-Ball a question:')
     if (question === null) {
-        document.getElementById('response-text').innerText = 'Looks like you did not enter a question, please ask a question.'
-        document.getElementById('response-text').classList = 'display text-danger'
-        document.getElementById('response-image').src = 'bad image'
+        document.getElementById('response-text').innerText = 'Looks like you did not enter a question, please ask a question.';
+        document.getElementById('response-text').classList = 'display text-danger';
+        document.getElementById('response-image').src = 'bad image';
+        return;
     }
-    if(!question.trim()) {
-        alert('Please enter a valid question!')
-        return
+    if (!question.trim()) {
+        alert('Please enter a valid question!');
+        return;
     }
+    const randomNumber = Math.floor(Math.random()*8)
+    let answer, image, color;
+
+    switch(randomNumber){
+        case 0:
+            answer = "Yes";
+            image = "yes-image.jpg";
+            color = "text-success";
+            break;
+        case 1:
+            eightBall = 'It is decidedly so';
+            image = "yes-image.jpg";
+            color = "text-success";
+            break;
+        case 2:
+            eightBall = 'Reply hazy try again';
+            image = "no-image.jpg";
+            color = "text-danger";
+            break;
+        case 3:
+            eightBall = 'Cannot predict now';
+            image = "no-image.jpg";
+            color = "text-danger";
+            break;
+        case 4:
+            eightBall = 'Do not count on it';
+            image = "no-image.jpg";
+            color = "text-danger";
+            break;
+        case 5:
+            eightBall = 'My sources say no';
+            image = "no-image.jpg";
+            color = "text-danger";
+            break;
+        case 6:
+            eightBall = 'Outlook not so good';
+            image = "no-image.jpg";
+            color = "text-danger";
+            break;
+        case 7:
+            eightBall = 'Signs point to yes';
+            image = "yes-image.jpg";
+            color = "text-success";
+            break;
+        default:
+            break;
+    }
+    const responseText = document.getElementById('response-text');
+    responseText.innerText = answer;
+    responseText.classlist = `display-4 $(color)`;
+    document.getElementById('response-image').src = image;
+
 }
