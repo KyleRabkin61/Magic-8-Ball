@@ -3,7 +3,7 @@ function shakeMagic8Ball() {
     if (question === null) {
         document.getElementById('response-text').innerText = 'Looks like you did not enter a question, please try again.';
         document.getElementById('response-text').classList = 'display text-danger';
-        document.getElementById('response-image').src = 'bad image';
+        document.getElementById('response-image').src = 'img/8-ball-removebg-preview.png';
         return;
     }
     if (!question.trim()) {
