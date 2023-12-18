@@ -26,12 +26,12 @@ function shakeMagic8Ball() {
             break;
         case 2:
             answer = 'Reply hazy try again';
-            image = "no-image.jpg";
+            image = "idk-meaning.jpg";
             color = "text-danger";
             break;
         case 3:
             answer = 'Cannot predict now';
-            image = "no-image.jpg";
+            image = "idk-meaning.jpg";
             color = "text-danger";
             break;
         case 4:
