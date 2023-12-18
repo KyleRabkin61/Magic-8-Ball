@@ -1,3 +1,31 @@
+body {
+    background-color:black;
+}
+.container {
+    background-color:white;
+    padding:10px;
+}
 img {
     width:400px;
+}
+.btn {
+    box-shadow:5px 5px 5px #71797E;
+    transition:0.25s;
+    font-family: 'Play', sans-serif;
+}
+.btn:hover {
+    box-shadow:none;
+    transition:0.25s;
+}
+.title {
+    font-family: 'Silkscreen', sans-serif;
+}
+.lucky {
+    font-family: 'Play', sans-serif;
+}
+.ask {
+    font-family: 'Play', sans-serif;
+}
+footer {
+    font-family: 'Play', sans-serif;
 }
